@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.SzeFXMLController">
+   <children>
+      <Button fx:id="Return" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
+      <Button layoutX="472.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleButtonActionClearSZSMosfet" prefHeight="50.0" prefWidth="114.0" text="Reset" />
+      <Button layoutX="472.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleButtonActionCalculateSZSMosfet" prefHeight="50.0" prefWidth="114.0" text="Izračunaj!" />
+      <GridPane layoutX="228.0" layoutY="60.0" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Label text="rd" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" text="Av" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Rul" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="79.0" text="Rizl" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="264.0" text="Ugsq">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" text="Idq" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Udsq" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="gm" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="Ugsq1" disable="true" prefWidth="96.0" GridPane.columnIndex="1" />
+            <TextField fx:id="Idq1" disable="true" layoutX="108.0" layoutY="13.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Udsq1" disable="true" layoutX="108.0" layoutY="44.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Gm1" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Rdizl1" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Av3" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Rul3" disable="true" layoutX="108.0" layoutY="199.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="Rizl3" disable="true" layoutX="108.0" layoutY="230.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="V" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="141.0" layoutY="17.0" text="mA" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="141.0" layoutY="48.0" text="V" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="79.0" text="mA/V" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="110.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="203.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="234.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="Ai3" disable="true" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Ai" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="83.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="81.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="63.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Label layoutX="10.0" layoutY="17.0" text="Rt" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Rg" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="79.0" text="Ugs0" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="μ" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="264.0" text="Udd">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" text="R1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Rd" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Rs" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="Udd1" GridPane.columnIndex="1" />
+            <TextField fx:id="R12" layoutX="108.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Rd1" layoutX="108.0" layoutY="44.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Rs1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Mi1" layoutX="108.0" layoutY="137.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Rt3" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="Rg3" layoutX="108.0" layoutY="199.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="Ugs01" layoutX="108.0" layoutY="230.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="V" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="141.0" layoutY="17.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="141.0" layoutY="48.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="79.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="172.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="203.0" text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="141.0" layoutY="234.0" text="V" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="R2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Ω" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="K" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="K" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="mA/V2" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="R22" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <CheckBox fx:id="checkCs1" layoutX="14.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleCheckBoxKondCs1" prefHeight="21.0" prefWidth="149.0" text="Kondenzator Cs" />
+      <GridPane layoutX="24.0" layoutY="381.0" prefHeight="65.0" prefWidth="535.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="121.0" text="Statički radni pravac">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Dinamički radni pravac" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="SRPSZS1" disable="true" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="DRPSZS1" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="323.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="24.0" layoutY="315.0" prefHeight="65.0" prefWidth="535.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="121.0" text="Ulazni napon">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Izlazni napon" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="Uul3" prefHeight="25.0" prefWidth="220.0" text="0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="Uizl3" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="V" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="V" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="208.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="273.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="65.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button fx:id="ShemaSzeShow" layoutX="472.0" layoutY="300.0" mnemonicParsing="false" onAction="#Shema" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
+      <Button fx:id="SzeGraf" layoutX="472.0" layoutY="360.0" mnemonicParsing="false" onAction="#Graf" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
+   </children>
+</AnchorPane>
