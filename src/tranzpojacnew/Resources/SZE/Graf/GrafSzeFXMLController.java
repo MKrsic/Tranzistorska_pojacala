@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tranzpojacnew;
+package tranzpojacnew.Resources.SZE.Graf;
 
+import tranzpojacnew.Resources.SZE.SzeFXMLController;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
