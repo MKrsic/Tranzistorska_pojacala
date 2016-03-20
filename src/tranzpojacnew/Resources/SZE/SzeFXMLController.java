@@ -197,7 +197,7 @@ public class SzeFXMLController implements Initializable {
 
     @FXML
     private void Return(ActionEvent event) throws IOException{
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("MainMenuFXML.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/MainMenuFXML.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
@@ -207,8 +207,7 @@ public class SzeFXMLController implements Initializable {
         stageSZE.close();
         open = false;
         stageSZEgraf.close();
-        openGraf = false;
-        
+        openGraf = false;    
     }
   
     
@@ -229,7 +228,7 @@ public class SzeFXMLController implements Initializable {
     public boolean open;
     @FXML
     public void Shema(ActionEvent event) throws Exception {               
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SzeShemaFXML.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Shema/SzeShemaFXML.fxml"));
                 if(open==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageSZE = new Stage();
@@ -261,7 +260,7 @@ public class SzeFXMLController implements Initializable {
     public boolean openGraf;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GrafSzeFXML.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
                 if(openGraf==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageSZEgraf = new Stage();

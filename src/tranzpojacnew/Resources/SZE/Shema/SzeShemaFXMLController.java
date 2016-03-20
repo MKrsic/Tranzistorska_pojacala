@@ -37,7 +37,7 @@ public class SzeShemaFXMLController implements Initializable {
 
     @FXML
     private void Return(ActionEvent event) throws IOException{
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("MainMenuFXML.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/MainMenuFXML.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         

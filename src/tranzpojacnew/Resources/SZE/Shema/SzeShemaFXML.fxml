@@ -6,11 +6,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.SzeFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.Resources.SZE.Shema.SzeShemaFXMLController">
    <children>
-      <ImageView fx:id="ShemaSZE" fitHeight="337.0" fitWidth="579.0" layoutX="16.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ShemaSZE" fitHeight="390.0" fitWidth="600.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/SZE.jpg" />
+            <Image url="@../../../Images/SZE.png" />
          </image>
       </ImageView>
    </children>

@@ -16,7 +16,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -83,7 +82,7 @@ public class SzcFXMLController implements Initializable {
 
     @FXML
     private void Return(ActionEvent event) throws IOException{
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("MainMenuFXML.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/MainMenuFXML.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         

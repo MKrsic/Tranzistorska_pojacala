@@ -33,7 +33,7 @@ public class MainMenuController implements Initializable {
        
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException{
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("SzeFXML.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/SZE/SzeFXML.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
@@ -43,7 +43,37 @@ public class MainMenuController implements Initializable {
     
     @FXML
     private void handleButtonAction1(ActionEvent event) throws IOException{
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("SzcFXML.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/SZC/SzcFXML.fxml"));
+            Scene home_page_scene = new Scene(home_page_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
+    
+    @FXML
+    private void handleButtonAction2(ActionEvent event) throws IOException{
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/JFET/JFET_FXML.fxml"));
+            Scene home_page_scene = new Scene(home_page_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
+    
+    @FXML
+    private void handleButtonAction3(ActionEvent event) throws IOException{
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/MOSFETszd/SZDmosfet.fxml"));
+            Scene home_page_scene = new Scene(home_page_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
+    
+    @FXML
+    private void handleButtonAction4(ActionEvent event) throws IOException{
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/MOSFETszs/SZSmosfet.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         

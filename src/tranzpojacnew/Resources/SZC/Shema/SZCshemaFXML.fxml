@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.Resources.SZC.Shema.SzcShemaFXMLController">
+   <children>
+      <ImageView fitHeight="384.0" fitWidth="612.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../../../Images/SZC.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
