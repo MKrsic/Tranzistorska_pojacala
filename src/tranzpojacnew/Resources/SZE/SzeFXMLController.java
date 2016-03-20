@@ -78,7 +78,7 @@ public class SzeFXMLController implements Initializable {
     @FXML
     private TextField Ai;
     @FXML
-    private Button Return;
+    private Button ReturnSZE;
     @FXML
     private CheckBox checkCe;
     @FXML
@@ -99,8 +99,7 @@ public class SzeFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    //public XYChart.Series SRP;
-    //public XYChart.Series DRP;
+
     
     @FXML
     private void handleButtonActionCalculateSZE(ActionEvent event) {
@@ -205,9 +204,9 @@ public class SzeFXMLController implements Initializable {
         app_stage.show();
         
         stageSZE.close();
-        open = false;
+        openSZEshema = false;
         stageSZEgraf.close();
-        openGraf = false;    
+        openGrafSZE = false;    
     }
   
     
@@ -225,11 +224,11 @@ public class SzeFXMLController implements Initializable {
 
     // otvaranje u novom prozoru
     public static Stage stageSZE;
-    public boolean open;
+    public boolean openSZEshema;
     @FXML
     public void Shema(ActionEvent event) throws Exception {               
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Shema/SzeShemaFXML.fxml"));
-                if(open==false){               
+                if(openSZEshema==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageSZE = new Stage();
                 stageSZE.setScene(new Scene(root1));
@@ -237,19 +236,19 @@ public class SzeFXMLController implements Initializable {
                 
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
-                Stage currentStage = (Stage) Return.getScene().getWindow(); // the current window...
+                Stage currentStage = (Stage) ReturnSZE.getScene().getWindow(); // the current window...
 
                 stageSZE.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageSZE.setY(currentStage.getY()-6);
                 stageSZE.show();
-                open = true;
+                openSZEshema = true;
                 }
                 //kad se prozor zatvara na defaultni Close, "open" se postavlja na false
                 stageSZE.setOnCloseRequest(new EventHandler<WindowEvent>() {
                     @Override
                     public void handle(WindowEvent we) {
                     //System.out.println("Stage is closing");
-                    open = false;
+                    openSZEshema = false;
                     }
                 });
     } 
@@ -257,11 +256,11 @@ public class SzeFXMLController implements Initializable {
     
         // otvaranje u novom prozoru
     public static Stage stageSZEgraf;
-    public boolean openGraf;
+    public boolean openGrafSZE;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
-                if(openGraf==false){               
+                if(openGrafSZE==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageSZEgraf = new Stage();
                 stageSZEgraf.setScene(new Scene(root1));
@@ -269,19 +268,19 @@ public class SzeFXMLController implements Initializable {
                 
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
-                Stage currentStage = (Stage) Return.getScene().getWindow(); // the current window...
+                Stage currentStage = (Stage) ReturnSZE.getScene().getWindow(); // the current window...
 
                 stageSZEgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
                 stageSZEgraf.setY(currentStage.getY()-6);
                 stageSZEgraf.show();
-                openGraf = true;
+                openGrafSZE = true;
                 }
                 //kad se prozor zatvara na defaultni Close, "open" se postavlja na false
                 stageSZEgraf.setOnCloseRequest(new EventHandler<WindowEvent>() {
                     @Override
                     public void handle(WindowEvent we) {
                     //System.out.println("Stage is closing");
-                    openGraf = false;
+                    openGrafSZE = false;
                     }
                 });
     }

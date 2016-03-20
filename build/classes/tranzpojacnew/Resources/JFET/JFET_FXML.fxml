@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.Resources.JFET.JFETFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.Resources.JFET.JFET_FXMLController">
    <children>
       <Button layoutX="486.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleButtonActionClearSZSFet" prefHeight="50.0" prefWidth="114.0" text="Reset" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="115.0" />
       <Button layoutX="486.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleButtonActionCalculateSZSFet" prefHeight="50.0" prefWidth="114.0" text="Izračunaj!" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="60.0" />
@@ -279,9 +279,9 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button fx:id="Return1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
+      <Button fx:id="ReturnJFET" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
       <Button layoutX="486.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
-      <Button layoutX="486.0" layoutY="281.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
+      <Button layoutX="486.0" layoutY="281.0" mnemonicParsing="false" onAction="#Shema" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
       <GridPane layoutX="30.0" layoutY="531.0" prefHeight="65.0" prefWidth="572.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <children>
             <Label prefHeight="21.0" prefWidth="162.0" text="Statički radni pravac">

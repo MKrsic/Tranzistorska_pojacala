@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tranzpojacnew.Resources.MOSFETszd.MOSFETszdFXMLController">
    <children>
-      <Button fx:id="Return" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="ReturnMOSFETszd" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" AnchorPane.leftAnchor="14.0" />
       <Button fx:id="ShemaSzeShow" layoutX="472.0" layoutY="300.0" mnemonicParsing="false" onAction="#Shema" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
       <Button fx:id="SzeGraf" layoutX="472.0" layoutY="360.0" mnemonicParsing="false" onAction="#Graf" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
       <GridPane layoutX="17.0" layoutY="60.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0">

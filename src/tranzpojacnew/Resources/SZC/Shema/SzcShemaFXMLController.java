@@ -25,7 +25,7 @@ import javafx.stage.Stage;
  */
 public class SzcShemaFXMLController implements Initializable {
     @FXML
-    private Button Return1;
+    private Button ReturnSZC;
 
     /**
      * Initializes the controller class.

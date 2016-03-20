@@ -324,8 +324,8 @@
       </GridPane>
       <Button layoutX="486.0" layoutY="68.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Izračunaj!" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="60.0" />
       <Button layoutX="486.0" layoutY="127.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Reset" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="115.0" />
-      <Button fx:id="Return1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
-      <Button layoutX="486.0" layoutY="281.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
-      <Button layoutX="486.0" layoutY="335.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
+      <Button fx:id="ReturnSZC" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
+      <Button layoutX="486.0" layoutY="281.0" mnemonicParsing="false" onAction="#Shema" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
+      <Button layoutX="486.0" layoutY="335.0" mnemonicParsing="false" onAction="#Graf" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
    </children>
 </AnchorPane>

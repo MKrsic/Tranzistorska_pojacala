@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tranzpojacnew.Resources.SZC;
+package tranzpojacnew.Resources.JFET;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -26,53 +27,55 @@ import javafx.stage.WindowEvent;
  *
  * @author Matija
  */
-public class SzcFXMLController implements Initializable {
+public class JFET_FXMLController implements Initializable {
     @FXML
-    private TextField Uul;
+    private TextField Ugsq;
     @FXML
-    private TextField Uizl;
+    private TextField Idq;
+    @FXML
+    private TextField Udsq;
+    @FXML
+    private TextField Gm;
+    @FXML
+    private TextField Rdizl;
+    @FXML
+    private TextField Av2;
+    @FXML
+    private TextField Rul2;
+    @FXML
+    private TextField Rizl2;
+    @FXML
+    private TextField Ai2;
+    @FXML
+    private TextField Udd;
+    @FXML
+    private TextField RG;
+    @FXML
+    private TextField Rd;
+    @FXML
+    private TextField Rs;
+    @FXML
+    private TextField Idss;
+    @FXML
+    private TextField Mi;
+    @FXML
+    private TextField Rt2;
+    @FXML
+    private TextField Rg2;
+    @FXML
+    private TextField Ugs0;
+    @FXML
+    private CheckBox checkCs;
+    @FXML
+    private TextField Uul2;
+    @FXML
+    private TextField Uizl2;
+    @FXML
+    private Button ReturnJFET;
     @FXML
     private TextField SRPSZE;
     @FXML
     private TextField DRPSZE;
-    @FXML
-    private TextField Ucc;
-    @FXML
-    private TextField R1;
-    @FXML
-    private TextField R2;
-    @FXML
-    private TextField Re;
-    @FXML
-    private TextField hfe;
-    @FXML
-    private TextField Rt;
-    @FXML
-    private TextField Rg;
-    @FXML
-    private TextField Ubeq;
-    @FXML
-    private TextField Ubb;
-    @FXML
-    private TextField Rbb;
-    @FXML
-    private TextField Ibq;
-    @FXML
-    private TextField Icq;
-    @FXML
-    private TextField Uceq;
-    @FXML
-    private TextField Hie;
-    @FXML
-    private TextField Rul;
-    @FXML
-    private TextField Rizl;
-    @FXML
-    private TextField Av;
-    @FXML
-    private TextField Ai;
-    @FXML
-    private Button ReturnSZC;
 
     /**
      * Initializes the controller class.
@@ -83,6 +86,18 @@ public class SzcFXMLController implements Initializable {
     }    
 
     @FXML
+    private void handleButtonActionClearSZSFet(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleButtonActionCalculateSZSFet(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleCheckBoxKondCs(ActionEvent event) {
+    }
+
+    @FXML
     private void Return(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/MainMenuFXML.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
@@ -91,72 +106,71 @@ public class SzcFXMLController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
         
-        stageSZC.close();
-        openSZCshema = false;
-        stageSZCgraf.close();
-        openGrafSZC = false; 
+        stageJFET.close();
+        openJFETshema = false;
+        stageJFETgraf.close();
+        openGrafJFET = false;    
     }
     
     // otvaranje u novom prozoru
-    public static Stage stageSZC;
-    public boolean openSZCshema;
+    public static Stage stageJFET;
+    public boolean openJFETshema;
     @FXML
-    public void Shema(ActionEvent event) throws Exception { 
-        System.out.println("asknčajsgbčajsgakjsgksgjasfjzs,gaj");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZC/Shema/SZCshemaFXML.fxml"));
-                if(openSZCshema==false){               
+    public void Shema(ActionEvent event) throws Exception {               
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/JFET/Shema/JFETshemaFXML.fxml"));
+                if(openJFETshema==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
-                stageSZC = new Stage();
-                stageSZC.setScene(new Scene(root1));
+                stageJFET = new Stage();
+                stageJFET.setScene(new Scene(root1));
                 //stageSZE.show();
                 
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
-                Stage currentStage = (Stage) ReturnSZC.getScene().getWindow(); // the current window...
+                Stage currentStage = (Stage) ReturnJFET.getScene().getWindow(); // the current window...
 
-                stageSZC.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
-                stageSZC.setY(currentStage.getY()-6);
-                stageSZC.show();
-                openSZCshema = true;
+                stageJFET.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
+                stageJFET.setY(currentStage.getY()-6);
+                stageJFET.show();
+                openJFETshema = true;
                 }
                 //kad se prozor zatvara na defaultni Close, "open" se postavlja na false
-                stageSZC.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                stageJFET.setOnCloseRequest(new EventHandler<WindowEvent>() {
                     @Override
                     public void handle(WindowEvent we) {
                     //System.out.println("Stage is closing");
-                    openSZCshema = false;
+                    openJFETshema = false;
                     }
                 });
     } 
     
     
         // otvaranje u novom prozoru
-    public static Stage stageSZCgraf;
-    public boolean openGrafSZC;
+    public static Stage stageJFETgraf;
+    public boolean openGrafJFET;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
-                if(openGrafSZC==false){               
+                if(openGrafJFET==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
-                stageSZCgraf = new Stage();
-                stageSZCgraf.setScene(new Scene(root1));
-                stageSZCgraf.show();
+                stageJFETgraf = new Stage();
+                stageJFETgraf.setScene(new Scene(root1));
+                stageJFETgraf.show();
                 
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
-                Stage currentStage = (Stage) ReturnSZC.getScene().getWindow(); // the current window...
+                Stage currentStage = (Stage) ReturnJFET.getScene().getWindow(); // the current window...
 
-                stageSZCgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
-                stageSZCgraf.setY(currentStage.getY()-6);
-                stageSZCgraf.show();
-                openGrafSZC = true;
+                stageJFETgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
+                stageJFETgraf.setY(currentStage.getY()-6);
+                stageJFETgraf.show();
+                openGrafJFET = true;
                 }
                 //kad se prozor zatvara na defaultni Close, "open" se postavlja na false
-                stageSZCgraf.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                stageJFETgraf.setOnCloseRequest(new EventHandler<WindowEvent>() {
                     @Override
                     public void handle(WindowEvent we) {
                     //System.out.println("Stage is closing");
-                    openGrafSZC = false;
+                    openGrafJFET = false;
                     }
                 });
     }
