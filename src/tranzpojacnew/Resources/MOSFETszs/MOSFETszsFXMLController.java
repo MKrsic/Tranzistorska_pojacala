@@ -21,6 +21,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import tranzpojacnew.Tranzistori.Unipolarni.MOSFETszsBezKond;
+import tranzpojacnew.Tranzistori.Unipolarni.MOSFETszsSaKond;
 
 /**
  * FXML Controller class
@@ -79,9 +81,10 @@ public class MOSFETszsFXMLController implements Initializable {
     @FXML
     private TextField Uizl3;
     @FXML
-    private Button ShemaSzeShow;
-    @FXML
-    private Button SzeGraf;
+    private Button Shema;
+    
+    boolean selectedSZSMosfet;
+    public static MOSFETszsSaKond MOSFETsK;
 
     /**
      * Initializes the controller class.
@@ -108,14 +111,96 @@ public class MOSFETszsFXMLController implements Initializable {
 
     @FXML
     private void handleButtonActionClearSZSMosfet(ActionEvent event) {
+        Udd1.clear();
+        R12.clear();
+        R22.clear();
+        Rd1.clear();
+        Rs1.clear();
+        Mi1.clear();
+        Rt3.clear();
+        Rg3.clear();
+        Ugs01.clear();
+        K.clear();   
+        
+        Ugsq1.clear();
+        Idq1.clear();
+        Udsq1.clear();
+        Gm1.clear();
+        Rdizl1.clear();
+        Av3.clear();
+        Ai3.clear();
+        Rul3.clear();
+        Rizl3.clear();
+        
+        Uul3.setText("0");
+        Uizl3.clear();
+        
+        DRPSZS1.clear();
+        SRPSZS1.clear();
     }
 
     @FXML
     private void handleButtonActionCalculateSZSMosfet(ActionEvent event) {
+        if(selectedSZSMosfet == true){   //odabir sa ili bez Cs (sa Cs)
+            MOSFETsK = new MOSFETszsSaKond(
+                    Double.parseDouble(Udd1.getText()), 
+                    Double.parseDouble(Ugs01.getText()), 
+                    Double.parseDouble(K.getText()), 
+                    Double.parseDouble(Mi1.getText()), 
+                    Double.parseDouble(R12.getText()), 
+                    Double.parseDouble(R22.getText()), 
+                    Double.parseDouble(Rs1.getText()), 
+                    Double.parseDouble(Rd1.getText()), 
+                    Double.parseDouble(Rt3.getText()), 
+                    Double.parseDouble(Rg3.getText()), 
+                    Double.parseDouble(Uul3.getText()));
+                
+        Ugsq1.setText(String.format("%.2f", MOSFETsK.getUgsq()));
+        Idq1.setText(String.format("%.2f", MOSFETsK.getIdq()));
+        Udsq1.setText(String.format("%.2f", MOSFETsK.getUdsq()));
+        Gm1.setText(String.format("%.2f", MOSFETsK.getGm()));
+        Rdizl1.setText(String.format("%.2f", MOSFETsK.getRd()));
+        Av3.setText(String.format("%.2f", MOSFETsK.getAv()));
+        Ai3.setText(String.format("%.2f", MOSFETsK.getAi()));
+        Rul3.setText(String.format("%.2f", MOSFETsK.getRul()));
+        Rizl3.setText(String.format("%.2f", MOSFETsK.getRizl()));
+        Uizl3.setText(String.format("%.2f", MOSFETsK.getUizl()));
+        SRPSZS1.setText(MOSFETsK.getSRP());             
+        DRPSZS1.setText(MOSFETsK.getDRP());
+        }
+        
+        if(selectedSZSMosfet == false){   //odabir sa ili bez Cs (bez Cs)
+            MOSFETszsBezKond MOSFETbK = new MOSFETszsBezKond(
+                    Double.parseDouble(Udd1.getText()), 
+                    Double.parseDouble(Ugs01.getText()), 
+                    Double.parseDouble(K.getText()), 
+                    Double.parseDouble(Mi1.getText()), 
+                    Double.parseDouble(R12.getText()), 
+                    Double.parseDouble(R22.getText()), 
+                    Double.parseDouble(Rs1.getText()), 
+                    Double.parseDouble(Rd1.getText()), 
+                    Double.parseDouble(Rt3.getText()), 
+                    Double.parseDouble(Rg3.getText()), 
+                    Double.parseDouble(Uul3.getText()));
+                
+        Ugsq1.setText(String.format("%.2f", MOSFETbK.getUgsq()));
+        Idq1.setText(String.format("%.2f", MOSFETbK.getIdq()));
+        Udsq1.setText(String.format("%.2f", MOSFETbK.getUdsq()));
+        Gm1.setText(String.format("%.2f", MOSFETbK.getGm()));
+        Rdizl1.setText(String.format("%.2f", MOSFETbK.getRd()));
+        Av3.setText(String.format("%.2f", MOSFETbK.getAv()));
+        Ai3.setText(String.format("%.2f", MOSFETbK.getAi()));
+        Rul3.setText(String.format("%.2f", MOSFETbK.getRul()));
+        Rizl3.setText(String.format("%.2f", MOSFETbK.getRizl()));
+        Uizl3.setText(String.format("%.2f", MOSFETbK.getUizl()));
+        SRPSZS1.setText(MOSFETbK.getSRP());             
+        DRPSZS1.setText(MOSFETbK.getDRP());
+        }
     }
 
     @FXML
     private void handleCheckBoxKondCs1(ActionEvent event) {
+        selectedSZSMosfet = checkCs1.isSelected();
     }
 
     // otvaranje u novom prozoru
