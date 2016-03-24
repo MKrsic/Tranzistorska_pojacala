@@ -239,7 +239,7 @@ public class MOSFETszsFXMLController implements Initializable {
     public boolean openGrafMOSFETszs;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/MOSFETszs/Graf/GrafMosfetSzsFXML.fxml"));
                 if(openGrafMOSFETszs==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageMOSFETszsGraf = new Stage();

@@ -3,15 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/MOSFETszs/Graf/GrafMosfetSzsFXMLController.java</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/SZC/Graf/GrafSzcFXML.fxml</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/MOSFETszd/Graf/GrafMosfetSzdFXML.fxml</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/JFET/Graf/GrafJfetFXML.fxml</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/JFET/Graf/GrafJfetFXMLController.java</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/TranzPojacNew.java</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/MOSFETszd/Graf/GrafMosfetSzdFXMLController.java</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/MOSFETszs/Graf/GrafMosfetSzsFXML.fxml</file>
-            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/SZC/Graf/GrafSzcFXMLController.java</file>
+            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXMLController.java</file>
+            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/MOSFETszs/MOSFETszsFXMLController.java</file>
+            <file>file:/D:/Projekti/NetBeans/tranzPojacNew/src/tranzpojacnew/Resources/JFET/JFET_FXMLController.java</file>
         </group>
     </open-files>
 </project-private>
