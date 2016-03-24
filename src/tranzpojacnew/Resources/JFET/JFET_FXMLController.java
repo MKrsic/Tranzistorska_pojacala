@@ -21,6 +21,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import tranzpojacnew.Tranzistori.Unipolarni.JFETbezKond;
+import tranzpojacnew.Tranzistori.Unipolarni.JFETsaKond;
 
 /**
  * FXML Controller class
@@ -73,9 +75,12 @@ public class JFET_FXMLController implements Initializable {
     @FXML
     private Button ReturnJFET;
     @FXML
-    private TextField SRPSZE;
+    private TextField SRPSZS;
     @FXML
-    private TextField DRPSZE;
+    private TextField DRPSZS;
+    
+    boolean selectedSZSFet;
+    public static JFETsaKond JFETsK;
 
     /**
      * Initializes the controller class.
@@ -87,14 +92,93 @@ public class JFET_FXMLController implements Initializable {
 
     @FXML
     private void handleButtonActionClearSZSFet(ActionEvent event) {
+        Udd.clear();
+        RG.clear();
+        Rd.clear();
+        Rs.clear();
+        Idss.clear();
+        Mi.clear();
+        Rt2.clear();
+        Rg2.clear();
+        Ugs0.clear();
+        
+        Ugsq.clear();
+        Idq.clear();
+        Udsq.clear();
+        Gm.clear();
+        Rdizl.clear();
+        Av2.clear();
+        Ai2.clear();
+        Rul2.clear();
+        Rizl2.clear();
+        
+        Uul2.setText("0");
+        Uizl2.clear();
+        
+        DRPSZS.clear();
+        SRPSZS.clear();
     }
 
     @FXML
     private void handleButtonActionCalculateSZSFet(ActionEvent event) {
+        if(selectedSZSFet == true){   //odabir sa ili bez Cs (sa Cs)
+             JFETsK = new JFETsaKond(
+                    Double.parseDouble(Udd.getText()), 
+                    Double.parseDouble(RG.getText()), 
+                    Double.parseDouble(Rd.getText()), 
+                    Double.parseDouble(Rs.getText()), 
+                    Double.parseDouble(Rg2.getText()), 
+                    Double.parseDouble(Rt2.getText()), 
+                    Double.parseDouble(Ugs0.getText()), 
+                    Double.parseDouble(Idss.getText()), 
+                    Double.parseDouble(Mi.getText()), 
+                    Double.parseDouble(Uul2.getText()));
+                
+        Ugsq.setText(String.format("%.2f", JFETsK.getUgsq()));
+        Idq.setText(String.format("%.2f", JFETsK.getIdq()));
+        Udsq.setText(String.format("%.2f", JFETsK.getUdsq()));
+        Gm.setText(String.format("%.2f", JFETsK.getGm()));
+        Rdizl.setText(String.format("%.2f", JFETsK.getRd()));
+        Av2.setText(String.format("%.2f", JFETsK.getAv()));
+        Ai2.setText(String.format("%.2f", JFETsK.getAi()));
+        Rul2.setText(String.format("%.2f", JFETsK.getRul()));
+        Rizl2.setText(String.format("%.2f", JFETsK.getRizl()));
+        Uizl2.setText(String.format("%.2f", JFETsK.getUizl()));
+        SRPSZS.setText(JFETsK.getSRP());             
+        DRPSZS.setText(JFETsK.getDRP());
+        }
+        
+        if(selectedSZSFet == false){   //odabir sa ili bez Cs (bez Cs)
+            JFETbezKond JFETbK = new JFETbezKond(
+                    Double.parseDouble(Udd.getText()), 
+                    Double.parseDouble(RG.getText()), 
+                    Double.parseDouble(Rd.getText()), 
+                    Double.parseDouble(Rs.getText()), 
+                    Double.parseDouble(Rg2.getText()), 
+                    Double.parseDouble(Rt2.getText()), 
+                    Double.parseDouble(Ugs0.getText()), 
+                    Double.parseDouble(Idss.getText()), 
+                    Double.parseDouble(Mi.getText()), 
+                    Double.parseDouble(Uul2.getText()));
+                
+        Ugsq.setText(String.format("%.2f", JFETbK.getUgsq()));
+        Idq.setText(String.format("%.2f", JFETbK.getIdq()));
+        Udsq.setText(String.format("%.2f", JFETbK.getUdsq()));
+        Gm.setText(String.format("%.2f", JFETbK.getGm()));
+        Rdizl.setText(String.format("%.2f", JFETbK.getRd()));
+        Av2.setText(String.format("%.2f", JFETbK.getAv()));
+        Ai2.setText(String.format("%.2f", JFETbK.getAi()));
+        Rul2.setText(String.format("%.2f", JFETbK.getRul()));
+        Rizl2.setText(String.format("%.2f", JFETbK.getRizl()));
+        Uizl2.setText(String.format("%.2f", JFETbK.getUizl()));
+        SRPSZS.setText(JFETbK.getSRP());             
+        DRPSZS.setText(JFETbK.getDRP());
+        }
     }
 
     @FXML
     private void handleCheckBoxKondCs(ActionEvent event) {
+        selectedSZSFet = checkCs.isSelected();
     }
 
     @FXML
