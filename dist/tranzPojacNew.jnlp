@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="tranzPojacNew.jar" size="117411" download="eager" />
+    <jar href="tranzPojacNew.jar" size="118908" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="tranzPojacNew" >
     <param name="requiredFXVersion" value="8.0+"/>
