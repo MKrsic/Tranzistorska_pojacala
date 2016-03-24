@@ -22,12 +22,12 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="Uul" prefHeight="25.0" prefWidth="220.0" text="0" GridPane.columnIndex="1">
+            <TextField fx:id="Uul1" prefHeight="25.0" prefWidth="220.0" text="0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="Uizl" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="Uizl1" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" />
                </GridPane.margin>
@@ -68,12 +68,12 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="SRPSZE" disable="true" GridPane.columnIndex="1">
+            <TextField fx:id="SRPSZC" disable="true" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="DRPSZE" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="DRPSZC" disable="true" layoutX="271.0" layoutY="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" />
                </GridPane.margin>
@@ -141,14 +141,14 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="Ucc" GridPane.columnIndex="1" />
-            <TextField fx:id="R1" layoutX="108.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="R2" layoutX="108.0" layoutY="44.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="Re" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="hfe" layoutX="108.0" layoutY="137.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="Rt" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="Rg" layoutX="108.0" layoutY="199.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="Ubeq" layoutX="108.0" layoutY="230.0" text="0.7" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="Ucc1" GridPane.columnIndex="1" />
+            <TextField fx:id="R11" layoutX="108.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="R21" layoutX="108.0" layoutY="44.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Re1" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="hfe1" layoutX="108.0" layoutY="137.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Rt1" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Rg1" layoutX="108.0" layoutY="199.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="Ubeq1" layoutX="108.0" layoutY="230.0" text="0.7" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <Label text="V" GridPane.columnIndex="2">
                <padding>
                   <Insets left="5.0" />
@@ -243,14 +243,14 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="Ubb" disable="true" prefWidth="96.0" GridPane.columnIndex="1" />
-            <TextField fx:id="Rbb" disable="true" layoutX="108.0" layoutY="13.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="Ibq" disable="true" layoutX="108.0" layoutY="44.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="Icq" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="Uceq" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="Hie" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="Rul" disable="true" layoutX="108.0" layoutY="199.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField fx:id="Rizl" disable="true" layoutX="108.0" layoutY="230.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="Ubb1" disable="true" prefWidth="96.0" GridPane.columnIndex="1" />
+            <TextField fx:id="Rbb1" disable="true" layoutX="108.0" layoutY="13.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Ibq1" disable="true" layoutX="108.0" layoutY="44.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Icq1" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Uceq1" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Hie1" disable="true" layoutX="108.0" layoutY="106.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Rul1" disable="true" layoutX="108.0" layoutY="199.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="Rizl1" disable="true" layoutX="108.0" layoutY="230.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Label text="V" GridPane.columnIndex="2">
                <padding>
                   <Insets left="5.0" />
@@ -291,7 +291,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="Av" disable="true" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="Av1" disable="true" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <Label text="Av" GridPane.rowIndex="6">
                <padding>
                   <Insets left="5.0" />
@@ -302,7 +302,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="Ai" disable="true" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="Ai1" disable="true" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="60.0" />
@@ -322,8 +322,8 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button layoutX="486.0" layoutY="68.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Izračunaj!" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="60.0" />
-      <Button layoutX="486.0" layoutY="127.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Reset" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="115.0" />
+      <Button layoutX="486.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonActionCalculateSZC" prefHeight="50.0" prefWidth="114.0" text="Izračunaj!" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="60.0" />
+      <Button layoutX="486.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonActionClearSZC" prefHeight="50.0" prefWidth="114.0" text="Reset" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="115.0" />
       <Button fx:id="ReturnSZC" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return" text="Main menu" />
       <Button layoutX="486.0" layoutY="281.0" mnemonicParsing="false" onAction="#Shema" prefHeight="50.0" prefWidth="114.0" text="Shema spoja" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="285.0" />
       <Button layoutX="486.0" layoutY="335.0" mnemonicParsing="false" onAction="#Graf" prefHeight="50.0" prefWidth="114.0" text="Graf" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />

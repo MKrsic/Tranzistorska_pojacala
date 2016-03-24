@@ -16,7 +16,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
@@ -87,20 +86,20 @@ public class SzeFXMLController implements Initializable {
     boolean selectedSZE;
     public static SZEbezKond SZEbK;
     
-        @FXML
-    public void handleCheckBoxKond (ActionEvent event){
-        selectedSZE = checkCe.isSelected();
-    }
-
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
+    }  
     
+    @FXML
+    public void handleCheckBoxKond (ActionEvent event){
+        selectedSZE = checkCe.isSelected();
+    }
+
     @FXML
     private void handleButtonActionCalculateSZE(ActionEvent event) {
                       

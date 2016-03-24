@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import tranzpojacnew.Tranzistori.Bipolarni.SZC.SZC;
 
 /**
  * FXML Controller class
@@ -28,52 +29,54 @@ import javafx.stage.WindowEvent;
  */
 public class SzcFXMLController implements Initializable {
     @FXML
-    private TextField Uul;
+    private TextField Uul1;
     @FXML
-    private TextField Uizl;
+    private TextField Uizl1;
     @FXML
-    private TextField SRPSZE;
+    private TextField SRPSZC;
     @FXML
-    private TextField DRPSZE;
+    private TextField DRPSZC;
     @FXML
-    private TextField Ucc;
+    private TextField Ucc1;
     @FXML
-    private TextField R1;
+    private TextField R11;
     @FXML
-    private TextField R2;
+    private TextField R21;
     @FXML
-    private TextField Re;
+    private TextField Re1;
     @FXML
-    private TextField hfe;
+    private TextField hfe1;
     @FXML
-    private TextField Rt;
+    private TextField Rt1;
     @FXML
-    private TextField Rg;
+    private TextField Rg1;
     @FXML
-    private TextField Ubeq;
+    private TextField Ubeq1;
     @FXML
-    private TextField Ubb;
+    private TextField Ubb1;
     @FXML
-    private TextField Rbb;
+    private TextField Rbb1;
     @FXML
-    private TextField Ibq;
+    private TextField Ibq1;
     @FXML
-    private TextField Icq;
+    private TextField Icq1;
     @FXML
-    private TextField Uceq;
+    private TextField Uceq1;
     @FXML
-    private TextField Hie;
+    private TextField Hie1;
     @FXML
-    private TextField Rul;
+    private TextField Rul1;
     @FXML
-    private TextField Rizl;
+    private TextField Rizl1;
     @FXML
-    private TextField Av;
+    private TextField Av1;
     @FXML
-    private TextField Ai;
+    private TextField Ai1;
     @FXML
     private Button ReturnSZC;
 
+    public static SZC SZC;
+    
     /**
      * Initializes the controller class.
      */
@@ -97,12 +100,39 @@ public class SzcFXMLController implements Initializable {
         openGrafSZC = false; 
     }
     
+     @FXML
+    private void handleButtonActionCalculateSZC(ActionEvent event) {
+         SZC = new SZC(
+                Double.parseDouble(Ucc1.getText()), 
+                Double.parseDouble(R11.getText()), 
+                Double.parseDouble(R21.getText()), 
+                Double.parseDouble(Re1.getText()), 
+                Double.parseDouble(hfe1.getText()), 
+                Double.parseDouble(Rt1.getText()), 
+                Double.parseDouble(Rg1.getText()), 
+                Double.parseDouble(Ubeq1.getText()), 
+                Double.parseDouble(Uul1.getText()));
+                
+        Ubb1.setText(String.format("%.2f", SZC.getUbb()));
+        Rbb1.setText(String.format("%.2f", SZC.getRbb()));
+        Ibq1.setText(String.format("%.2f", SZC.getIbqua()));
+        Icq1.setText(String.format("%.2f", SZC.getIcqma()));
+        Uceq1.setText(String.format("%.2f", SZC.getUceq()));
+        Av1.setText(String.format("%.2f", SZC.getAv()));
+        Hie1.setText(String.format("%.2f", SZC.getHie()));
+        Rul1.setText(String.format("%.2f", SZC.getRul()));
+        Rizl1.setText(String.format("%.2f", SZC.getRizl()));
+        Ai1.setText(String.format("%.2f", SZC.getAi()));
+        Uizl1.setText(String.format("%.2f", SZC.getUizl()));
+        SRPSZC.setText(SZC.getSRP());             
+        DRPSZC.setText(SZC.getDRP());             
+    }
+    
     // otvaranje u novom prozoru
     public static Stage stageSZC;
     public boolean openSZCshema;
     @FXML
     public void Shema(ActionEvent event) throws Exception { 
-        System.out.println("asknčajsgbčajsgakjsgksgjasfjzs,gaj");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZC/Shema/SZCshemaFXML.fxml"));
                 if(openSZCshema==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
@@ -159,6 +189,35 @@ public class SzcFXMLController implements Initializable {
                     openGrafSZC = false;
                     }
                 });
+    }
+    
+    @FXML
+    private void handleButtonActionClearSZC(ActionEvent event){
+        Ubb1.clear();
+        Rbb1.clear();
+        Ibq1.clear();
+        Icq1.clear();
+        Uceq1.clear();
+        Av1.clear();
+        Ai1.clear();
+        Hie1.clear();
+        Rul1.clear();
+        Rizl1.clear();
+        
+        Ucc1.clear();
+        R11.clear();
+        R21.clear();
+        Re1.clear();
+        hfe1.clear();
+        Rt1.clear();
+        Rg1.clear();
+        Ubeq1.setText("0.7");
+        
+        Uul1.setText("0");
+        Uizl1.clear();
+        
+        DRPSZC.clear();
+        SRPSZC.clear();
     }
     
 }
