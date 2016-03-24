@@ -18,7 +18,7 @@ import javafx.scene.chart.LineChart;
  */
 public class GrafMosfetSzdFXMLController implements Initializable {
     @FXML
-    private LineChart<?, ?> chartSZD;
+    private LineChart<Integer, Integer> chartSZD;
 
     /**
      * Initializes the controller class.

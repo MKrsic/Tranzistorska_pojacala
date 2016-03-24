@@ -131,4 +131,14 @@ public class SZC {
         return "ic= " + String.format("%.2f", ReRt) + " uce+ " +
         String.format("%.2f", icquceq) + " mA";
     }
+
+    public double getReRec() {return reRec;}
+
+    public double getUccRe() {return uccRe;}
+
+    public double getReRt() {return ReRt;}
+
+    public double getIcquceq() {return icquceq;}
+    
+    
 }

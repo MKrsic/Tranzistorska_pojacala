@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 
 /**
  * FXML Controller class
@@ -18,14 +20,13 @@ import javafx.scene.chart.LineChart;
  */
 public class GrafJfetFXMLController implements Initializable {
     @FXML
-    private LineChart<?, ?> chartSZS;
+    private LineChart<Integer, Integer> chartSZS;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
     
 }

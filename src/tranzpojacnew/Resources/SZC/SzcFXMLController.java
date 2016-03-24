@@ -165,7 +165,7 @@ public class SzcFXMLController implements Initializable {
     public boolean openGrafSZC;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZC/Graf/GrafSzcFXML.fxml"));
                 if(openGrafSZC==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageSZCgraf = new Stage();
