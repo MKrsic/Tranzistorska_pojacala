@@ -83,8 +83,9 @@ public class SzeFXMLController implements Initializable {
     @FXML
     private Button ShemaSzeShow;
     
-    boolean selectedSZE;
+    public boolean selectedSZE;
     public static SZEbezKond SZEbK;
+    public static SZEsaKond SZEsK;
     
     
     /**
@@ -133,7 +134,7 @@ public class SzeFXMLController implements Initializable {
         }
           
         if(selectedSZE == true){   //odabir sa ili bez Ce (sa Ce)
-             SZEsaKond SZEsK = new SZEsaKond(    
+             SZEsK = new SZEsaKond(    
                     Double.parseDouble(Ucc.getText()), 
                     Double.parseDouble(R1.getText()), 
                     Double.parseDouble(R2.getText()),

@@ -151,4 +151,12 @@ public class MOSFETszsSaKond {
         return "id= " + String.format("%.2f", RdRt) + " uds+ " +
         String.format("%.2f", idqudsq) + " mA";
     } 
+    
+    public double getRdRs() {return RdRs;}
+
+    public double getUddRdRs() {return uddRdRs;}
+
+    public double getRdRt() {return RdRt;}
+
+    public double getIdqudsq() {return idqudsq;}
 }

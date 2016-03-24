@@ -85,6 +85,7 @@ public class MOSFETszsFXMLController implements Initializable {
     
     boolean selectedSZSMosfet;
     public static MOSFETszsSaKond MOSFETsK;
+    public static MOSFETszsBezKond MOSFETbK;
 
     /**
      * Initializes the controller class.
@@ -170,7 +171,7 @@ public class MOSFETszsFXMLController implements Initializable {
         }
         
         if(selectedSZSMosfet == false){   //odabir sa ili bez Cs (bez Cs)
-            MOSFETszsBezKond MOSFETbK = new MOSFETszsBezKond(
+            MOSFETbK = new MOSFETszsBezKond(
                     Double.parseDouble(Udd1.getText()), 
                     Double.parseDouble(Ugs01.getText()), 
                     Double.parseDouble(K.getText()), 
