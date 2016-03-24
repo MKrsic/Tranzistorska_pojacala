@@ -49,11 +49,13 @@
             </Label>
             <TextField fx:id="Udd2" GridPane.columnIndex="1" />
             <TextField fx:id="R13" layoutX="108.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="R23" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="Rs2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="Mi2" layoutX="108.0" layoutY="137.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="Rt4" layoutX="108.0" layoutY="106.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="Rg4" layoutX="108.0" layoutY="199.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField fx:id="Ugs02" layoutX="108.0" layoutY="230.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="K1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label text="V" GridPane.columnIndex="2">
                <padding>
                   <Insets left="5.0" />
@@ -99,13 +101,11 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="K1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label text="mA/V2" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="R23" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
