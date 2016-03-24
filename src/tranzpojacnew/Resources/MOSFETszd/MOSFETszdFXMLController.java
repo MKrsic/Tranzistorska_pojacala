@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import tranzpojacnew.Tranzistori.Unipolarni.MOSFETszd;
 
 /**
  * FXML Controller class
@@ -74,9 +75,11 @@ public class MOSFETszdFXMLController implements Initializable {
     @FXML
     private TextField Uizl4;
     @FXML
-    private TextField SRPSZE;
+    private TextField SRPSZD;
     @FXML
-    private TextField DRPSZE;
+    private TextField DRPSZD;
+    
+    public static MOSFETszd MOSFETszd;
 
     /**
      * Initializes the controller class.
@@ -165,10 +168,59 @@ public class MOSFETszdFXMLController implements Initializable {
 
     @FXML
     private void handleButtonActionClearSZDMosfet(ActionEvent event) {
+        Udd2.clear();
+        R13.clear();
+        R23.clear();
+        Rs2.clear();
+        Mi2.clear();
+        Rt4.clear();
+        Rg4.clear();
+        Ugs02.clear();
+        K1.clear();
+        
+        Ugsq2.clear();
+        Idq2.clear();
+        Udsq2.clear();
+        Gm2.clear();
+        Rdizl2.clear();
+        Av4.clear();
+        Ai4.clear();
+        Rul4.clear();
+        Rizl4.clear();
+        
+        Uul4.setText("0");
+        Uizl4.clear();
+        
+        DRPSZD.clear();
+        SRPSZD.clear();
     }
 
     @FXML
     private void handleButtonActionCalculateSZDmosfet(ActionEvent event) {
+         MOSFETszd = new MOSFETszd(
+                Double.parseDouble(Udd2.getText()), 
+                Double.parseDouble(Ugs02.getText()), 
+                Double.parseDouble(K1.getText()), 
+                Double.parseDouble(Mi2.getText()), 
+                Double.parseDouble(R13.getText()), 
+                Double.parseDouble(R23.getText()), 
+                Double.parseDouble(Rs2.getText()), 
+                Double.parseDouble(Rt4.getText()), 
+                Double.parseDouble(Rg4.getText()), 
+                Double.parseDouble(Uul4.getText()));
+        
+        Ugsq2.setText(String.format("%.2f", MOSFETszd.getUgsq()));
+        Idq2.setText(String.format("%.2f", MOSFETszd.getIdq()));
+        Udsq2.setText(String.format("%.2f", MOSFETszd.getUdsq()));
+        Gm2.setText(String.format("%.2f", MOSFETszd.getGm()));
+        Rdizl2.setText(String.format("%.2f", MOSFETszd.getRd()));
+        Av4.setText(String.format("%.2f", MOSFETszd.getAv()));
+        Ai4.setText(String.format("%.2f", MOSFETszd.getAi()));
+        Rul4.setText(String.format("%.2f", MOSFETszd.getRul()));
+        Rizl4.setText(String.format("%.2f", MOSFETszd.getRizl()));
+        Uizl4.setText(String.format("%.2f", MOSFETszd.getUizl()));
+        SRPSZD.setText(MOSFETszd.getSRP());             
+        DRPSZD.setText(MOSFETszd.getDRP());  
     }
     
 }
