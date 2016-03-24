@@ -133,4 +133,13 @@ public class SZEsaKond {
         return "ic= " + String.format("%.2f", RcRt) + " uce+ " +
         String.format("%.2f", icquceq) + " mA";
     }
+
+    public double getRcRe() {return RcRe;}
+
+    public double getUccRcRe() {return uccRcRe;}
+
+    public double getRcRt() {return RcRt;}
+
+    public double getIcquceq() {return icquceq;}
+    
 }

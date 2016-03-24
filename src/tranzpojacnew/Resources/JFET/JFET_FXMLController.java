@@ -81,6 +81,7 @@ public class JFET_FXMLController implements Initializable {
     
     boolean selectedSZSFet;
     public static JFETsaKond JFETsK;
+    public static JFETbezKond JFETbK;
 
     /**
      * Initializes the controller class.
@@ -149,7 +150,7 @@ public class JFET_FXMLController implements Initializable {
         }
         
         if(selectedSZSFet == false){   //odabir sa ili bez Cs (bez Cs)
-            JFETbezKond JFETbK = new JFETbezKond(
+            JFETbK = new JFETbezKond(
                     Double.parseDouble(Udd.getText()), 
                     Double.parseDouble(RG.getText()), 
                     Double.parseDouble(Rd.getText()), 
@@ -233,7 +234,7 @@ public class JFET_FXMLController implements Initializable {
     public boolean openGrafJFET;
     @FXML
     public void Graf(ActionEvent event) throws Exception {               
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/SZE/Graf/GrafSzeFXML.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/tranzpojacnew/Resources/JFET/Graf/GrafJfetFXML.fxml"));
                 if(openGrafJFET==false){               
                 Parent root1 = (Parent) fxmlLoader.load();
                 stageJFETgraf = new Stage();
