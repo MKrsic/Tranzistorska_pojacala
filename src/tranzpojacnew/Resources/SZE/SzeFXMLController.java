@@ -238,6 +238,7 @@ public class SzeFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZE.getScene().getWindow(); // the current window...
                 
+                stageSZE.setTitle("Shema spoja zajedničkog emitera");                
                 stageSZE.setResizable(false);
                 stageSZE.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageSZE.setY(currentStage.getY()-6);
@@ -271,6 +272,7 @@ public class SzeFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZE.getScene().getWindow(); // the current window...
 
+                stageSZEgraf.setTitle("Grafički prikaz SRP-a i DRP-a");
                 stageSZEgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
                 stageSZEgraf.setY(currentStage.getY()-6);
                 stageSZEgraf.show();

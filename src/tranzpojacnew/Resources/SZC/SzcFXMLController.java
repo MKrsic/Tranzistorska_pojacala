@@ -144,6 +144,7 @@ public class SzcFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZC.getScene().getWindow(); // the current window...
                 
+                stageSZC.setTitle("Shema spoja zajedničkog kolektora");
                 stageSZC.setResizable(false);
                 stageSZC.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageSZC.setY(currentStage.getY()-6);
@@ -177,6 +178,7 @@ public class SzcFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZC.getScene().getWindow(); // the current window...
 
+                stageSZCgraf.setTitle("Grafički prikaz SRP-a i DRP-a");
                 stageSZCgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
                 stageSZCgraf.setY(currentStage.getY()-6);
                 stageSZCgraf.show();

@@ -220,6 +220,7 @@ public class MOSFETszsFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnMOSFETszs.getScene().getWindow(); // the current window...
                 
+                stageMOSFETszs.setTitle("Shema spoja zajedničkog source-a");
                 stageMOSFETszs.setResizable(false);
                 stageMOSFETszs.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageMOSFETszs.setY(currentStage.getY()-6);
@@ -252,6 +253,7 @@ public class MOSFETszsFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnMOSFETszs.getScene().getWindow(); // the current window...
 
+                stageMOSFETszsGraf.setTitle("Grafički prikaz SRP-a i DRP-a");
                 stageMOSFETszsGraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
                 stageMOSFETszsGraf.setY(currentStage.getY()-6);
                 stageMOSFETszsGraf.show();

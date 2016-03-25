@@ -213,6 +213,7 @@ public class JFET_FXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnJFET.getScene().getWindow(); // the current window...
 
+                stageJFET.setTitle("Shema spoja zajdničkog source-a");
                 stageJFET.setResizable(false);
                 stageJFET.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageJFET.setY(currentStage.getY()-6);
@@ -246,6 +247,7 @@ public class JFET_FXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnJFET.getScene().getWindow(); // the current window...
 
+                stageJFETgraf.setTitle("Grafički prikaz SRP-a i DRP-a");
                 stageJFETgraf.setX(currentStage.getX() - currentStage.getWidth() - 18);
                 stageJFETgraf.setY(currentStage.getY()-6);
                 stageJFETgraf.show();
