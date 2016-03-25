@@ -99,8 +99,8 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <CheckBox fx:id="checkCe" layoutX="14.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleCheckBoxKond" prefHeight="21.0" prefWidth="135.0" text="Kondenzator Ce" />
-      <GridPane layoutX="14.0" layoutY="67.0" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0">
+      <CheckBox fx:id="checkCe" layoutX="14.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleCheckBoxKond" prefHeight="21.0" prefWidth="135.0" text="Kondenzator Ce" AnchorPane.topAnchor="400.0" />
+      <GridPane layoutX="14.0" layoutY="67.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0">
          <children>
             <Label text="Re" GridPane.rowIndex="4">
                <padding>
