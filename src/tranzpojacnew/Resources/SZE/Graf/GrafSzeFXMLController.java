@@ -27,39 +27,38 @@ public class GrafSzeFXMLController extends SzeFXMLController implements Initiali
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-       
+    public void initialize(URL url, ResourceBundle rb) {       
         if(selectedSZE == false){
-        chartSZE.getData().clear();
-               
-        final NumberAxis xAxis = new NumberAxis();
-        final NumberAxis yAxis = new NumberAxis();
-         
-        xAxis.setLabel("uce (V)");
-        yAxis.setLabel("ic (mA)");
-        xAxis.setForceZeroInRange(false);
-        yAxis.setForceZeroInRange(false);
-        yAxis.setLowerBound(0);
-        
+            chartSZE.getData().clear();
 
-        XYChart.Series SRP = new XYChart.Series();
-        SRP.setName("Statički radni pravac");
-        
-        XYChart.Series DRP = new XYChart.Series();
-        DRP.setName("Dinamički radni pravac");
-                
-        double n = 0;
-        while ((SZEbK.getRcRe()*n+SZEbK.getUccRcRe()) >= -1){
-            String xVal = String.format("%.1f", n);
-            SRP.getData().add(new XYChart.Data(xVal, (SZEbK.getRcRe()*n+SZEbK.getUccRcRe())));
-            n = n + 0.1;
-        }
-        
-        double m = 0;
-        while ((SZEbK.getRcRtRe()*m + SZEbK.getIcquceq()) >= -1){
-            String yVal = String.format("%.1f", m);
-            DRP.getData().add(new XYChart.Data(yVal, (SZEbK.getRcRtRe()*m + SZEbK.getIcquceq())));
-            m = m + 0.1;
+            final NumberAxis xAxis = new NumberAxis();
+            final NumberAxis yAxis = new NumberAxis();
+
+            xAxis.setLabel("uce (V)");
+            yAxis.setLabel("ic (mA)");
+            xAxis.setForceZeroInRange(false);
+            yAxis.setForceZeroInRange(false);
+            yAxis.setLowerBound(0);
+
+
+            XYChart.Series SRP = new XYChart.Series();
+            SRP.setName("Statički radni pravac");
+
+            XYChart.Series DRP = new XYChart.Series();
+            DRP.setName("Dinamički radni pravac");
+
+            double n = 0;
+            while ((SZEbK.getRcRe()*n+SZEbK.getUccRcRe()) >= -1){
+                String xVal = String.format("%.1f", n);
+                SRP.getData().add(new XYChart.Data(xVal, (SZEbK.getRcRe()*n+SZEbK.getUccRcRe())));
+                n = n + 0.1;
+            }
+
+            double m = 0;
+            while ((SZEbK.getRcRtRe()*m + SZEbK.getIcquceq()) >= -1){
+                String yVal = String.format("%.1f", m);
+                DRP.getData().add(new XYChart.Data(yVal, (SZEbK.getRcRtRe()*m + SZEbK.getIcquceq())));
+                m = m + 0.1;
         }
         
         chartSZE.setCreateSymbols(false);
@@ -69,44 +68,43 @@ public class GrafSzeFXMLController extends SzeFXMLController implements Initiali
         }
         
         if(selectedSZE == true){
-        chartSZE.getData().clear();
-               
-        final NumberAxis xAxis = new NumberAxis();
-        final NumberAxis yAxis = new NumberAxis();
-         
-        xAxis.setLabel("uce (V)");
-        yAxis.setLabel("ic (mA)");
-        xAxis.setForceZeroInRange(false);
-        yAxis.setForceZeroInRange(false);
-        yAxis.setLowerBound(0);
-        
+            chartSZE.getData().clear();
 
-        XYChart.Series SRP = new XYChart.Series();
-        SRP.setName("Statički radni pravac");
-        
-        XYChart.Series DRP = new XYChart.Series();
-        DRP.setName("Dinamički radni pravac");
-                
-        double n = 0;
-        while ((SZEsK.getRcRe()*n+SZEsK.getUccRcRe()) >= -1){
-            String xVal = String.format("%.1f", n);
-            SRP.getData().add(new XYChart.Data(xVal, (SZEsK.getRcRe()*n+SZEsK.getUccRcRe())));
-            n = n + 0.1;
-        }
-        
-        double m = 0;
-        while ((SZEsK.getRcRt()*m + SZEsK.getIcquceq()) >= -1){
-            String yVal = String.format("%.1f", m);
-            DRP.getData().add(new XYChart.Data(yVal, (SZEsK.getRcRt()*m + SZEsK.getIcquceq())));
-            m = m + 0.1;
-        }
-        
-        chartSZE.setCreateSymbols(false);
-        chartSZE.setAnimated(false);
-        chartSZE.getData().add(SRP);
-        chartSZE.getData().add(DRP);
-        }
-  
+            final NumberAxis xAxis = new NumberAxis();
+            final NumberAxis yAxis = new NumberAxis();
+
+            xAxis.setLabel("uce (V)");
+            yAxis.setLabel("ic (mA)");
+            xAxis.setForceZeroInRange(false);
+            yAxis.setForceZeroInRange(false);
+            yAxis.setLowerBound(0);
+
+
+            XYChart.Series SRP = new XYChart.Series();
+            SRP.setName("Statički radni pravac");
+
+            XYChart.Series DRP = new XYChart.Series();
+            DRP.setName("Dinamički radni pravac");
+
+            double n = 0;
+            while ((SZEsK.getRcRe()*n+SZEsK.getUccRcRe()) >= -1){
+                String xVal = String.format("%.1f", n);
+                SRP.getData().add(new XYChart.Data(xVal, (SZEsK.getRcRe()*n+SZEsK.getUccRcRe())));
+                n = n + 0.1;
+            }
+
+            double m = 0;
+            while ((SZEsK.getRcRt()*m + SZEsK.getIcquceq()) >= -1){
+                String yVal = String.format("%.1f", m);
+                DRP.getData().add(new XYChart.Data(yVal, (SZEsK.getRcRt()*m + SZEsK.getIcquceq())));
+                m = m + 0.1;
+            }
+
+            chartSZE.setCreateSymbols(false);
+            chartSZE.setAnimated(false);
+            chartSZE.getData().add(SRP);
+            chartSZE.getData().add(DRP);
+        } 
     }    
     
 }
