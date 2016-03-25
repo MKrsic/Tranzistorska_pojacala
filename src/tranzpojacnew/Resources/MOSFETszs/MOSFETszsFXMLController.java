@@ -219,7 +219,8 @@ public class MOSFETszsFXMLController implements Initializable {
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnMOSFETszs.getScene().getWindow(); // the current window...
-
+                
+                stageMOSFETszs.setResizable(false);
                 stageMOSFETszs.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageMOSFETszs.setY(currentStage.getY()-6);
                 stageMOSFETszs.show();

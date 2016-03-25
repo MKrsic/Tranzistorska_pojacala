@@ -213,6 +213,7 @@ public class JFET_FXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnJFET.getScene().getWindow(); // the current window...
 
+                stageJFET.setResizable(false);
                 stageJFET.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageJFET.setY(currentStage.getY()-6);
                 stageJFET.show();

@@ -39,7 +39,7 @@ public class GrafSzeFXMLController extends SzeFXMLController implements Initiali
             xAxis.setForceZeroInRange(false);
             yAxis.setForceZeroInRange(false);
             yAxis.setLowerBound(0);
-
+            
 
             XYChart.Series SRP = new XYChart.Series();
             SRP.setName("Statički radni pravac");

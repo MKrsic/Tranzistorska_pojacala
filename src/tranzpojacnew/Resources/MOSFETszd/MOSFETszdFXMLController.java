@@ -120,6 +120,7 @@ public class MOSFETszdFXMLController implements Initializable {
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnMOSFETszd.getScene().getWindow(); // the current window...
 
+                stageMOSFETszd.setResizable(false);
                 stageMOSFETszd.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageMOSFETszd.setY(currentStage.getY()-6);
                 stageMOSFETszd.show();

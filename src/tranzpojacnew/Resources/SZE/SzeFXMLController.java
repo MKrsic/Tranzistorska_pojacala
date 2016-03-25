@@ -237,7 +237,8 @@ public class SzeFXMLController implements Initializable {
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZE.getScene().getWindow(); // the current window...
-
+                
+                stageSZE.setResizable(false);
                 stageSZE.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageSZE.setY(currentStage.getY()-6);
                 stageSZE.show();

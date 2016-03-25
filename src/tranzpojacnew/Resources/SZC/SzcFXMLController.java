@@ -143,7 +143,8 @@ public class SzcFXMLController implements Initializable {
              //otvaranje pokraj main screena                
                 double windowGap = 5 ;
                 Stage currentStage = (Stage) ReturnSZC.getScene().getWindow(); // the current window...
-
+                
+                stageSZC.setResizable(false);
                 stageSZC.setX(currentStage.getX() + currentStage.getWidth() + windowGap);
                 stageSZC.setY(currentStage.getY()-6);
                 stageSZC.show();
