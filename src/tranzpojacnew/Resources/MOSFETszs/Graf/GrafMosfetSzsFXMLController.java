@@ -30,7 +30,6 @@ public class GrafMosfetSzsFXMLController extends MOSFETszsFXMLController impleme
     public void initialize(URL url, ResourceBundle rb) {
         
         if(selectedSZSMosfet == true){
-            System.out.println("TRUETRUETRUETRUETRUETRUE");
         chartSZS1.getData().clear();
                
         final NumberAxis xAxis = new NumberAxis();
@@ -70,7 +69,6 @@ public class GrafMosfetSzsFXMLController extends MOSFETszsFXMLController impleme
         }
         
         if(selectedSZSMosfet == false){
-            System.out.println("FALSEFALSEFALSEFALSEFALSEFALSE");
             chartSZS1.getData().clear();
                
         final NumberAxis xAxis = new NumberAxis();

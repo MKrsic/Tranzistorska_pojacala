@@ -83,7 +83,7 @@ public class MOSFETszsFXMLController implements Initializable {
     @FXML
     private Button Shema;
     
-    public boolean selectedSZSMosfet;
+    public static boolean selectedSZSMosfet;
     public static MOSFETszsSaKond MOSFETsK;
     public static MOSFETszsBezKond MOSFETbK;
 

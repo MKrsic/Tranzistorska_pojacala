@@ -28,7 +28,7 @@ public class GrafSzeFXMLController extends SzeFXMLController implements Initiali
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("FALSEFALSEFALSEFALSEFALSE");
+       
         if(selectedSZE == false){
         chartSZE.getData().clear();
                
@@ -69,7 +69,6 @@ public class GrafSzeFXMLController extends SzeFXMLController implements Initiali
         }
         
         if(selectedSZE == true){
-            System.out.println("TRUETRUETRUETRUETRUETRUE");
         chartSZE.getData().clear();
                
         final NumberAxis xAxis = new NumberAxis();

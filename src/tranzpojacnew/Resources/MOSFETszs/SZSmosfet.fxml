@@ -163,6 +163,7 @@
             </Label>
             <TextField fx:id="Udd1" GridPane.columnIndex="1" />
             <TextField fx:id="R12" layoutX="108.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="R22" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="Rd1" layoutX="108.0" layoutY="44.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="Rs1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="Mi1" layoutX="108.0" layoutY="137.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
@@ -225,7 +226,6 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="R22" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

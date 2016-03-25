@@ -79,7 +79,7 @@ public class JFET_FXMLController implements Initializable {
     @FXML
     private TextField DRPSZS;
     
-    boolean selectedSZSFet;
+    public static boolean selectedSZSFet;
     public static JFETsaKond JFETsK;
     public static JFETbezKond JFETbK;
 

@@ -83,10 +83,10 @@ public class SzeFXMLController implements Initializable {
     @FXML
     private Button ShemaSzeShow;
     
-    public boolean selectedSZE;
+    public static boolean selectedSZE;
     public static SZEbezKond SZEbK;
     public static SZEsaKond SZEsK;
-    
+      
     
     /**
      * Initializes the controller class.
