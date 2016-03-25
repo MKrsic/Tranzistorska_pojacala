@@ -38,6 +38,7 @@ public class MainMenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Spoj zajedničkog emitera");
         app_stage.show();
     }
     
@@ -48,6 +49,7 @@ public class MainMenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Spoj zajedničkog kolektora");
         app_stage.show();
     }
     
@@ -58,6 +60,7 @@ public class MainMenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Spoj zajedničkog source-a JFET");
         app_stage.show();
     }
     
@@ -68,6 +71,7 @@ public class MainMenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Spoj zajedničkog drain-a MOSFET");
         app_stage.show();
     }
     
@@ -78,6 +82,7 @@ public class MainMenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Spoj zajedničkog source-a MOSFET");
         app_stage.show();
     }
       

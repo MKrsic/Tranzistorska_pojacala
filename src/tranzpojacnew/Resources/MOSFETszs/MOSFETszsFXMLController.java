@@ -102,6 +102,7 @@ public class MOSFETszsFXMLController implements Initializable {
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         app_stage.setScene(home_page_scene);
+        app_stage.setTitle("Tranzistorska pojačala");
         app_stage.show();
         
         stageMOSFETszs.close();
