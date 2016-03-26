@@ -17,7 +17,7 @@ import tranzpojacnew.Resources.MOSFETszd.MOSFETszdFXMLController;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class GrafMosfetSzdFXMLController extends MOSFETszdFXMLController implements Initializable {
     @FXML

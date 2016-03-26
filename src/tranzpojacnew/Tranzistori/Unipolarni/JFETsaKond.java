@@ -9,7 +9,7 @@ import static java.lang.Math.sqrt;
 
 /**
  *
- * @author Korisnik
+ * @author MatijaKrsic
  */
 public class JFETsaKond {
     
@@ -61,8 +61,7 @@ public class JFETsaKond {
         
         idssMa = idss/1000;
         
-        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse
-        //racunanje
+        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse racunanje
         double a = 1;
         double b = (-2*ugso)+((ugso*ugso)/(rs*idssMa));
         double c = ugso*ugso;

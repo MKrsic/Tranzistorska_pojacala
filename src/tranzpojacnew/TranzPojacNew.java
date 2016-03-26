@@ -13,10 +13,17 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class TranzPojacNew extends Application {
     
+    /**
+     * 
+     * @param stage
+     * @throws Exception
+     * 
+     * Opens MainMenuFXML scene
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenuFXML.fxml"));

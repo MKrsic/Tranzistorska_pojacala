@@ -6,8 +6,8 @@
 package tranzpojacnew.Tranzistori.Bipolarni.SZE;
 
 /**
- *
- * @author Korisnik
+ * 
+ * @author MatijaKrsic
  */
 public class SZEbezKond {
     
@@ -25,9 +25,9 @@ public class SZEbezKond {
     private double ubb;        
     private double rbb;
     private double ibq;
-    private double ibqua;  //za prikaz u uA
+    private double ibqua;  //varijabla za prikaz u uA
     private double icq;
-    private double icqma;  //za prikaz u mA
+    private double icqma;  //varijabla za prikaz u mA
     private double uceq;
     private double hie;
     private double av;
@@ -37,11 +37,11 @@ public class SZEbezKond {
     private double uizl; 
     private double ai;
         
-    private double RcRe; //mnozi se sa 1000 zbog prikaza u mA
-    private double uccRcRe; //mnozi se sa 1000 zbog prikaza u mA
+    private double RcRe;
+    private double uccRcRe;
         
-    private double RcRtRe; //mnozenje zbog mA
-    private double icquceq; //mnozenje zbog ma
+    private double RcRtRe;
+    private double icquceq;
 
     public SZEbezKond(double ucc, double r1, double r2, double rc, double re, double hfe, double rt, double rg, double ubeq, double uul) {
         this.ucc = ucc;
@@ -58,9 +58,9 @@ public class SZEbezKond {
         ubb = (r2/(r1+r2))*ucc;        
         rbb = (r1*r2)/(r1+r2);
         ibq = ((ubb-ubeq)/(rbb+((1+hfe)*re)));
-        ibqua = ibq * 1000000;  //za prikaz u uA
+        ibqua = ibq * 1000000;  //mnozenje za prikaz u uA
         icq = hfe * ibq;
-        icqma = icq * 1000;        //za prikaz u mA
+        icqma = icq * 1000;     //mnozenje za prikaz u mA
         uceq = ucc - ((rc+re)*icq);
         hie = 0.025/ibq;
         av = -hfe * (((rc*rt)/(rc+rt))/(hie+(1+hfe)*re));
@@ -70,16 +70,13 @@ public class SZEbezKond {
         uizl = uulpoj * av; 
         ai = -av * (rul/rt);
         
-        RcRe = (-1/(rc+re)) * 1000; //mnozi se sa 1000 zbog prikaza u mA
+        RcRe = (-1/(rc+re)) * 1000;      //mnozi se sa 1000 zbog prikaza u mA
         uccRcRe = (ucc /(rc+re)) * 1000; //mnozi se sa 1000 zbog prikaza u mA
         
-        RcRtRe = (-1/((rc*rt)/(rc+rt)+re)) * 1000; //mnozenje zbog mA
-        icquceq = (icq + (uceq/((rc*rt)/(rc+rt)+re))) * 1000; //mnozenje zbog ma
+        RcRtRe = (-1/((rc*rt)/(rc+rt)+re)) * 1000;            //mnozenje zbog prikaza u mA
+        icquceq = (icq + (uceq/((rc*rt)/(rc+rt)+re))) * 1000; //mnozenje zbog prikaza u mA
     }
-    
-    
 
-    
     //seteri
     public void setUcc(double ucc) {this.ucc = ucc;}
 
@@ -136,8 +133,7 @@ public class SZEbezKond {
         return "ic= " + String.format("%.2f", RcRtRe) + " uce+ " +
         String.format("%.2f", icquceq) + " mA";
     }
-
-    
+ 
     
     public double getRcRe() {return RcRe;}
 
@@ -146,8 +142,7 @@ public class SZEbezKond {
     public double getRcRtRe() {return RcRtRe;}
 
     public double getIcquceq() {return icquceq;}
-    
-    
+   
     
 }
 

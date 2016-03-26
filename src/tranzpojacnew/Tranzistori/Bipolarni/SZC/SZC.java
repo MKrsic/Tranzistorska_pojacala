@@ -6,8 +6,8 @@
 package tranzpojacnew.Tranzistori.Bipolarni.SZC;
 
 /**
- *
- * @author Korisnik
+ * 
+ * @author MatijaKrsic
  */
 public class SZC {
     
@@ -24,9 +24,9 @@ public class SZC {
     private double ubb;        
     private double rbb;
     private double ibq;
-    private double ibqua;  //za prikaz u uA
+    private double ibqua;  //varijabla za prikaz u uA
     private double icq;
-    private double icqma;        //za prikaz u mA
+    private double icqma;  //varijabla za prikaz u mA
     private double uceq;
     private double hie;
     private double av;
@@ -36,12 +36,13 @@ public class SZC {
     private double uizl;       
     private double ai;
     
-    double reRec; //mnozi se sa 1000 zbog prikaza u mA
-    double uccRe; //mnozi se zbog prikaza u mA
-        
-    double ReRt; //mnozenje zbog mA
-    double icquceq; //mnozenje zbog mA
+    double reRec; 
+    double uccRe;
+    
+    double ReRt;
+    double icquceq;
 
+    
     public SZC(double ucc, double r1, double r2, double re, double hfe, double rt, double rg, double ubeq, double uul) {
         this.ucc = ucc;
         this.r1 = r1;
@@ -56,9 +57,9 @@ public class SZC {
         ubb = (r2/(r1+r2))*ucc;        
         rbb = (r1*r2)/(r1+r2);
         ibq = ((ubb-ubeq)/(rbb+((1+hfe)*re)));
-        ibqua = ibq * 1000000;  //za prikaz u uA
+        ibqua = ibq * 1000000;  //mnozenje za prikaz u uA
         icq = hfe * ibq;
-        icqma = icq * 1000;        //za prikaz u mA
+        icqma = icq * 1000;      //mnozenje za prikaz u mA
         uceq = ucc - (re*icq);
         hie = 0.025/ibq;
         av = ((1+hfe)*((re*rt)/(re+rt))) / (((1+hfe)*((re*rt)/(re+rt)))+hie);
@@ -139,6 +140,5 @@ public class SZC {
     public double getReRt() {return ReRt;}
 
     public double getIcquceq() {return icquceq;}
-    
-    
+     
 }

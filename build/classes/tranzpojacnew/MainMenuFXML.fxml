@@ -10,7 +10,7 @@
    <children>
       <GridPane layoutX="167.0" layoutY="142.0" prefHeight="317.0" prefWidth="267.0">
          <children>
-            <Button fx:id="Sze" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="300.0" text="Spoj zajedničkog emitera" />
+            <Button mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="300.0" text="Spoj zajedničkog emitera" />
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction1" prefHeight="45.0" prefWidth="300.0" text="Spoj zajedničkog kolektora" GridPane.rowIndex="1" />
             <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="45.0" prefWidth="300.0" text="Spoj zajedničkog source-a (JFET)" GridPane.rowIndex="2" />
             <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="45.0" prefWidth="300.0" text="Spoj zajedničkog source-a (MOSFET)" GridPane.rowIndex="3" />

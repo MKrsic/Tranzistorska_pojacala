@@ -6,8 +6,8 @@
 package tranzpojacnew.Tranzistori.Bipolarni.SZE;
 
 /**
- *
- * @author Korisnik
+ * 
+ * @author MatijaKrsic
  */
 public class SZEsaKond {
     
@@ -25,9 +25,9 @@ public class SZEsaKond {
     double ubb;        
     double rbb;
     double ibq;
-    double ibqua;  //za prikaz u uA
+    double ibqua;  //varijabla za prikaz u uA
     double icq;
-    double icqma;        //za prikaz u mA
+    double icqma;  //varijabla za prikaz u mA
     double uceq;
     double hie;
     double av;
@@ -37,11 +37,11 @@ public class SZEsaKond {
     double uizl;
     double ai;
         
-    double RcRe; //mnozi se sa 1000 zbog prikaza u mA
-    double uccRcRe; //mnozi se sa 1000 zbog prikaza u ma
+    double RcRe;
+    double uccRcRe;
         
-    double RcRt; //mnozenje zbog mA
-    double icquceq; //mnozenje zbog mA
+    double RcRt;
+    double icquceq;
 
     public SZEsaKond(double ucc, double r1, double r2, double rc, double re, double hfe, double rt, double rg, double ubeq, double uul) {
         this.ucc = ucc;
@@ -57,9 +57,9 @@ public class SZEsaKond {
         ubb = (r2/(r1+r2))*ucc;        
         rbb = (r1*r2)/(r1+r2);
         ibq = ((ubb-ubeq)/(rbb+((1+hfe)*re)));
-        ibqua = ibq * 1000000;  //za prikaz u uA
+        ibqua = ibq * 1000000;     //mnozenje za prikaz u uA
         icq = hfe * ibq;
-        icqma = icq * 1000;        //za prikaz u mA
+        icqma = icq * 1000;        //mnozenje za prikaz u mA
         uceq = ucc - ((rc+re)*icq);
         hie = 0.025/ibq;
         av = -hfe * (((rc*rt)/(rc+rt))/(hie));
@@ -69,10 +69,10 @@ public class SZEsaKond {
         uizl = uulpoj * av;
         ai = -av * (rul/rt);
         
-        RcRe = (-1/(rc+re)) * 1000; //mnozi se sa 1000 zbog prikaza u mA
+        RcRe = (-1/(rc+re)) * 1000;      //mnozi se sa 1000 zbog prikaza u mA
         uccRcRe = (ucc /(rc+re)) * 1000; //mnozi se sa 1000 zbog prikaza u ma
         
-        RcRt = (-1/((rc*rt)/(rc+rt))) * 1000; //mnozenje zbog mA
+        RcRt = (-1/((rc*rt)/(rc+rt))) * 1000;              //mnozenje zbog mA
         icquceq = (icq + (uceq/((rc*rt)/(rc+rt)))) * 1000; //mnozenje zbog mA
     }    
     

@@ -25,7 +25,7 @@ import tranzpojacnew.Tranzistori.Unipolarni.MOSFETszd;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class MOSFETszdFXMLController implements Initializable {
     @FXML

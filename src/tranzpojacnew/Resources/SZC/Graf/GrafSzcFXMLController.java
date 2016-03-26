@@ -17,7 +17,7 @@ import tranzpojacnew.Resources.SZC.SzcFXMLController;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class GrafSzcFXMLController extends SzcFXMLController implements Initializable {
     @FXML

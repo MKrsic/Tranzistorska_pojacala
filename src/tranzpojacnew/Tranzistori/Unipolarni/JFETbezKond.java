@@ -9,7 +9,7 @@ import static java.lang.Math.sqrt;
 
 /**
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class JFETbezKond {
     
@@ -33,7 +33,7 @@ public class JFETbezKond {
     private double idqMa;
     private double udsq;
     private double gm;
-    private double gmmA; //mnozenje zbog prikaza u mA/v
+    private double gmmA;
     private double rd;
     private double rdrD;   // rd||rD
     private double rdrDrt;   // rd||rD||rt
@@ -42,11 +42,11 @@ public class JFETbezKond {
     private double rizl;
     private double uizl;
     
-    private double RdRs; //mnozi se sa 1000 zbog prikaza u mA
-    private double uddRdRs; //mnozi se sa 1000 zbog prikaza u ma
-    private double RdRt; //mnozenje zbog mA
-    private double idqudsq; //mnozenje zbog mA
-    private double miRsRd; //(1+mi)*Rs+rd
+    private double RdRs;
+    private double uddRdRs;
+    private double RdRt;
+    private double idqudsq;
+    private double miRsRd;
 
     public JFETbezKond(double udd, double rG, double rD, double rs, double rg, double rt, double ugso, double idss, double mi, double uul) {
         this.udd = udd;
@@ -62,8 +62,7 @@ public class JFETbezKond {
         
         idssMa = idss/1000;
         
-        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse
-        //racunanje
+        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse racunanje
         double a = 1;
         double b = (-2*ugso)+((ugso*ugso)/(rs*idssMa));
         double c = ugso*ugso;

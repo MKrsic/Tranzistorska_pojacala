@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tranzpojacnew;
 
 import java.io.IOException;
@@ -20,17 +15,21 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class MainMenuController implements Initializable {
     
 
     @FXML
-    private Button Sze;
-    @FXML
     private Button Return;
     
-       
+    /**
+     * 
+     * @param event
+     * @throws IOException 
+     * 
+     * Opens SzeFXML scene
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/SZE/SzeFXML.fxml"));
@@ -42,6 +41,13 @@ public class MainMenuController implements Initializable {
         app_stage.show();
     }
     
+    /**
+     * 
+     * @param event
+     * @throws IOException
+     * 
+     * Opens SzcFXML scene
+     */
     @FXML
     private void handleButtonAction1(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/SZC/SzcFXML.fxml"));
@@ -53,6 +59,14 @@ public class MainMenuController implements Initializable {
         app_stage.show();
     }
     
+    
+    /**
+     * 
+     * @param event
+     * @throws IOException
+     * 
+     * Opens JFET_FXML scene
+     */
     @FXML
     private void handleButtonAction2(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/JFET/JFET_FXML.fxml"));
@@ -64,6 +78,14 @@ public class MainMenuController implements Initializable {
         app_stage.show();
     }
     
+    
+    /**
+     * 
+     * @param event
+     * @throws IOException 
+     * 
+     * Opens SZDmosfet scene
+     */
     @FXML
     private void handleButtonAction3(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/MOSFETszd/SZDmosfet.fxml"));
@@ -75,6 +97,13 @@ public class MainMenuController implements Initializable {
         app_stage.show();
     }
     
+    /**
+     * 
+     * @param event
+     * @throws IOException 
+     * 
+     * Opens SZSmosfet scene
+     */
     @FXML
     private void handleButtonAction4(ActionEvent event) throws IOException{
          Parent home_page_parent = FXMLLoader.load(getClass().getResource("/tranzpojacnew/Resources/MOSFETszs/SZSmosfet.fxml"));
@@ -85,8 +114,7 @@ public class MainMenuController implements Initializable {
         app_stage.setTitle("Spoj zajedničkog source-a MOSFET");
         app_stage.show();
     }
-      
-        
+         
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

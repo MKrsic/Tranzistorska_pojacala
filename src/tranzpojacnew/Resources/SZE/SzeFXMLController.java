@@ -27,7 +27,7 @@ import tranzpojacnew.Tranzistori.Bipolarni.SZE.SZEsaKond;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class SzeFXMLController implements Initializable {
     @FXML
@@ -83,7 +83,7 @@ public class SzeFXMLController implements Initializable {
     @FXML
     private Button ShemaSzeShow;
     
-    public static boolean selectedSZE;
+    public static boolean selectedSZE;  //varijabla koja prati ON/OFF kondenzatora Ce
     public static SZEbezKond SZEbK;
     public static SZEsaKond SZEsK;
       
@@ -208,20 +208,7 @@ public class SzeFXMLController implements Initializable {
         openSZEshema = false;
         stageSZEgraf.close();
         openGrafSZE = false;    
-    }
-  
-    
-//    otvarnje u istom prozoru    
-//    @FXML
-//    private void Shema(ActionEvent event) throws IOException{
-//         Parent home_page_parent = FXMLLoader.load(getClass().getResource("SzeShemaFXML.fxml"));
-//            Scene home_page_scene = new Scene(home_page_parent);
-//            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        
-//        app_stage.setScene(home_page_scene);
-//        app_stage.show();
-//    }
-    
+    }  
 
     // otvaranje u novom prozoru
     public static Stage stageSZE;

@@ -17,7 +17,7 @@ import javafx.scene.chart.XYChart;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class GrafSzeFXMLController extends SzeFXMLController implements Initializable {
     @FXML

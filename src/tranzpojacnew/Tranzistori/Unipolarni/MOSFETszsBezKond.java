@@ -9,7 +9,7 @@ import static java.lang.Math.sqrt;
 
 /**
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class MOSFETszsBezKond {
     
@@ -66,8 +66,7 @@ public class MOSFETszsBezKond {
         
         ugg = (r2/(r1+r2)*udd);
         
-        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse
-        //racunanje
+        //postavljanje vrijednosti clanova kvadratne jednadzbe za kasnije lakse racunanje
         double a = 1;
         double b = ((2/(kmA*rs))-(2*ugso));
         double c = (ugso*ugso) - ((2*ugg)/(kmA*rs));

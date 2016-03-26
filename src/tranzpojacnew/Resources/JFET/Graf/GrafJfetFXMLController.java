@@ -17,7 +17,7 @@ import tranzpojacnew.Resources.JFET.JFET_FXMLController;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class GrafJfetFXMLController extends JFET_FXMLController implements Initializable {
     @FXML

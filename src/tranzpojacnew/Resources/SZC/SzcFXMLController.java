@@ -25,7 +25,7 @@ import tranzpojacnew.Tranzistori.Bipolarni.SZC.SZC;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class SzcFXMLController implements Initializable {
     @FXML

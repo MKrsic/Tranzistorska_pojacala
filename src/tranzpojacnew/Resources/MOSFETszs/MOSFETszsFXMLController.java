@@ -27,7 +27,7 @@ import tranzpojacnew.Tranzistori.Unipolarni.MOSFETszsSaKond;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class MOSFETszsFXMLController implements Initializable {
     @FXML

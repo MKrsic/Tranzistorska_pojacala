@@ -27,7 +27,7 @@ import tranzpojacnew.Tranzistori.Unipolarni.JFETsaKond;
 /**
  * FXML Controller class
  *
- * @author Matija
+ * @author MatijaKrsic
  */
 public class JFET_FXMLController implements Initializable {
     @FXML
