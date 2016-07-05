@@ -192,10 +192,14 @@ public class JFET_FXMLController implements Initializable {
         app_stage.setTitle("Tranzistorska pojačala");
         app_stage.show();
         
-        stageJFET.close();
-        openJFETshema = false;
-        stageJFETgraf.close();
-        openGrafJFET = false;    
+        if (stageJFET != null) {
+            stageJFET.close();
+            openJFETshema = false;
+        }
+        if (stageJFETgraf != null) {
+            stageJFETgraf.close();
+            openGrafJFET = false;
+        }  
     }
     
     // otvaranje u novom prozoru

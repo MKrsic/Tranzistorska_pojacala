@@ -118,7 +118,7 @@ public class SZEbezKond {
     public double getRizl() {return rizl;}
     
     public double getUizl() {
-        if(uizl >= ucc) return ucc;
+        if(Math.abs(uizl) >= ucc) return -ucc;
         else return uizl;    
     }
    

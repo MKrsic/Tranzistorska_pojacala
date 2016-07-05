@@ -102,8 +102,7 @@ public class SzeFXMLController implements Initializable {
     }
 
     @FXML
-    private void handleButtonActionCalculateSZE(ActionEvent event) {
-                      
+    private void handleButtonActionCalculateSZE(ActionEvent event) {       
          if(selectedSZE == false){   //odabir sa ili bez Ce (bez Ce)
                 SZEbK = new SZEbezKond(    
                     Double.parseDouble(Ucc.getText()), 
@@ -204,10 +203,14 @@ public class SzeFXMLController implements Initializable {
         app_stage.setTitle("Tranzistorska pojačala");
         app_stage.show();
         
-        stageSZE.close();
-        openSZEshema = false;
-        stageSZEgraf.close();
-        openGrafSZE = false;    
+        if (stageSZE != null) {
+            stageSZE.close();
+            openSZEshema = false;
+        }
+        if (stageSZEgraf != null) {
+            stageSZEgraf.close();
+            openGrafSZE = false;
+        }
     }  
 
     // otvaranje u novom prozoru

@@ -105,10 +105,14 @@ public class MOSFETszsFXMLController implements Initializable {
         app_stage.setTitle("Tranzistorska pojačala");
         app_stage.show();
         
-        stageMOSFETszs.close();
-        openMOSFETszsShema = false;
-        stageMOSFETszsGraf.close();
-        openGrafMOSFETszs = false; 
+        if (stageMOSFETszs != null) {
+            stageMOSFETszs.close();
+            openMOSFETszsShema = false;
+        }
+        if (stageMOSFETszsGraf != null) {
+            stageMOSFETszsGraf.close();
+            openGrafMOSFETszs = false;
+        }
     }
 
     @FXML

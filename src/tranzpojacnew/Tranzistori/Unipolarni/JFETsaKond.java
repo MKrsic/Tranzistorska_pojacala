@@ -133,7 +133,7 @@ public class JFETsaKond {
     public double getRizl() {return rizl;}
     
     public double getUizl() {
-        if(uizl >= udd) return udd;
+        if(Math.abs(uizl) >= udd) return -udd;
         else return uizl;    
     }
     

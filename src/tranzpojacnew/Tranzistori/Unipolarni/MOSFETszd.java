@@ -95,7 +95,7 @@ public class MOSFETszd {
         RdRs = (-1/rs) * 1000; //mnozi se sa 1000 zbog prikaza u mA
         uddRdRs = (udd /rs) * 1000; //mnozi se sa 1000 zbog prikaza u ma
         
-        RdRt = (-1/((rs*rt)/(rD+rs))) * 1000; //mnozenje zbog mA
+        RdRt = (-1/((rs*rt)/(rt+rs))) * 1000; //mnozenje zbog mA
         idqudsq = (idq + (udsq/((rs*rt)/(rs+rt)))) * 1000; //mnozenje zbog mA
         
     }
